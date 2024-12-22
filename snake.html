@@ -12,6 +12,52 @@
         <!-- <div id="hiscoreBox">Hi Score : 0</div> -->
         <div id="board"></div>
     </div>
+
+    <div id="controls">
+        <button id="up">↑</button>
+        <div>
+            <button id="left">←</button>
+            <button id="down">↓</button>
+            <button id="right">→</button>
+        </div>
+    </div>
+    
+    <style>
+        /* Default styles for controls */
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        #controls button {
+            margin: 5px;
+            padding: 15px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+    
+        #controls button:active {
+            background-color: #ddd;
+        }
+    
+        /* Hide controls for larger screens (e.g., laptops/desktops) */
+        @media (min-width: 768px) {
+            #controls {
+                display: none; /* Hide for screens wider than 768px */
+            }
+        }
+    </style>
+    
+
 </body>
 <script src="snake.js"></script>
 </html>
