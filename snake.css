@@ -83,3 +83,59 @@
         border-radius: 10px;
     }
 }
+
+
+//mobile
+
+// Initialize variables for touch control
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+// Add touch event listeners for mobile support
+window.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+});
+
+window.addEventListener("touchmove", (e) => {
+    touchEndX = e.touches[0].clientX;
+    touchEndY = e.touches[0].clientY;
+});
+
+window.addEventListener("touchend", () => {
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    // Check swipe direction
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // Horizontal swipe
+        if (diffX > 0) {
+            // Swipe right
+            inputDir.x = 1;
+            inputDir.y = 0;
+            console.log("Swipe Right");
+        } else {
+            // Swipe left
+            inputDir.x = -1;
+            inputDir.y = 0;
+            console.log("Swipe Left");
+        }
+    } else {
+        // Vertical swipe
+        if (diffY > 0) {
+            // Swipe down
+            inputDir.x = 0;
+            inputDir.y = 1;
+            console.log("Swipe Down");
+        } else {
+            // Swipe up
+            inputDir.x = 0;
+            inputDir.y = -1;
+            console.log("Swipe Up");
+        }
+    }
+});
+
+
