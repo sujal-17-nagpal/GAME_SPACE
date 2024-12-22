@@ -1,0 +1,136 @@
+h1 {
+    background-color: rgb(5, 5, 87);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem; /* Adjusted for better scaling */
+    color: wheat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow for aesthetic */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(249, 208, 240);
+    box-sizing: border-box; /* Added for consistent box model */
+}
+
+.container {
+    height: 300px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Adjusted for better structure */
+    gap: 20px; /* Added gap for consistent spacing */
+}
+
+.game {
+    background-color: blue;
+    height: 280px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.box {
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    color: red;
+    background-color: rgb(233, 239, 239);
+    font-size: 2rem; /* Adjusted font size for better scaling */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth hover effect */
+}
+
+.box:hover {
+    transform: scale(1.1); /* Subtle zoom effect */
+    background-color: rgb(200, 225, 225); /* Highlighted background */
+}
+
+.reset-but {
+    display: flex;
+    height: 90px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#but {
+    width: 220px;
+    height: 55px;
+    background-color: rgb(129, 205, 224);
+    color: rgb(29, 21, 21);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth button effects */
+}
+
+#but:hover {
+    background-color: rgb(100, 185, 200); /* Highlighted button color */
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        height: 100px;
+    }
+    .container {
+        margin-top: 70px;
+    }
+    .game {
+        height: 220px;
+        width: 220px;
+    }
+    .box {
+        height: 70px;
+        width: 70px;
+        font-size: 1.5rem;
+    }
+    #but {
+        width: 180px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        height: 80px;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .game {
+        height: 180px;
+        width: 180px;
+    }
+    .box {
+        height: 50px;
+        width: 50px;
+        font-size: 1rem;
+    }
+    #but {
+        width: 160px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+}

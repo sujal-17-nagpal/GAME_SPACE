@@ -1,0 +1,133 @@
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    background-color: black;
+    color: aliceblue;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better appearance */
+}
+
+body {
+    background-color: rgb(241, 223, 233);
+    font-family: Arial, sans-serif; /* Added default font family */
+}
+
+.choices {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Added wrap for responsiveness */
+    gap: 20px; /* Added gap for consistent spacing */
+}
+
+.choice {
+    transform: rotate(-90deg);
+}
+
+.img {
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.img:hover {
+    border: 5px solid black;
+    opacity: 0.5;
+    cursor: pointer;
+    transform: scale(1.1); /* Added subtle zoom on hover */
+}
+
+.score-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Reduced gap for better appearance */
+    margin: 40px auto;
+    flex-wrap: wrap; /* Added wrap for smaller screens */
+    width: 90%; /* Adjusted width for responsiveness */
+}
+
+#name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#user-score,
+#comp-score {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(23, 23, 65); /* Added matching text color */
+}
+
+.msg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: rgb(23, 23, 65);
+    color: wheat;
+    margin: 40px auto; /* Centered and reduced margin */
+    border-radius: 20px;
+    height: 110px;
+    width: 80%; /* Adjusted for responsiveness */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow for better visibility */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+    .choices {
+        margin-top: 50px;
+        gap: 15px;
+    }
+    .img {
+        width: 80px;
+        height: 80px;
+    }
+    .score-board {
+        gap: 30px;
+        margin: 20px auto;
+    }
+    #user-score,
+    #comp-score {
+        font-size: 1.5rem;
+    }
+    .msg-container {
+        font-size: 1.5rem;
+        height: 90px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heading {
+        font-size: 1.2rem;
+        height: 50px;
+    }
+    .choices {
+        margin-top: 40px;
+    }
+    .img {
+        width: 60px;
+        height: 60px;
+    }
+    .score-board {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .msg-container {
+        font-size: 1.2rem;
+        height: 80px;
+        width: 95%;
+    }
+}

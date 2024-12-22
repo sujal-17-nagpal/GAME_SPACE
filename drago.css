@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer {
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.dino {
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 75px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+
+.gameOver {
+    /* visibility: hidden; */
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+#scoreCont {
+    position: absolute;
+    font-weight: bold;
+    right: 5%;
+    top: 5%;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+    background-color: white;
+    border-radius: 5px;
+}
+.obstacle {
+    background-image: url(dragon.png);
+    background-size: cover;
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 70vw;
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 30vh;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -10vw;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dino {
+        width: 120px;
+        height: 60px;
+    }
+    .obstacle {
+        width: 100px;
+        height: 70px;
+    }
+    #scoreCont {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    .gameOver {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dino {
+        width: 100px;
+        height: 50px;
+        left: 3%;
+    }
+    .obstacle {
+        width: 80px;
+        height: 60px;
+    }
+    #scoreCont {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    .gameOver {
+        font-size: 1.5rem;
+    }
+}

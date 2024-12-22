@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Icons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+            gap: 20px;
+        }
+
+        .game {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden; /* Ensures images fit nicely */
+        }
+
+        .game:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .game img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .game h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .game p {
+            color: #666;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .game-grid {
+                gap: 15px;
+            }
+
+            .game {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .game img {
+                max-height: 150px;
+            }
+
+            .game h3 {
+                font-size: 1.2rem;
+            }
+
+            .game p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Game</h1>
+        <div class="game-grid">
+            <!-- Game 1 -->
+            <div id="snake-game" class="game">
+                <img src="snake-game-img.png" alt="Snake Game">
+                <h3>Snake Game</h3>
+                <p>Classic snake game for endless fun!</p>
+            </div>
+
+            <!-- Game 2 -->
+            <div id="bubble-game" class="game">
+                <img src="bubble-game-img.png" alt="Bubble Game">
+                <h3>Bubble Game</h3>
+                <p>Pop the bubbles for a high score!</p>
+            </div>
+
+            <!-- Game 3 -->
+            <div id="drago-game" class="game">
+                <img src="drago-game-img.png" alt="Dragon Game">
+                <h3>Dragon Game</h3>
+                <p>Fly with the dragon in an adventure!</p>
+            </div>
+
+            <!-- Game 4 -->
+            <div id="stone-paper-scissor-game" class="game">
+                <img src="stone-paper-scissor-game-img.png" alt="Stone Paper Scissors">
+                <h3>Stone Paper Scissors</h3>
+                <p>Challenge your friends and win!</p>
+            </div>
+
+            <!-- Game 5 -->
+            <div id="tic-tac-toe-game" class="game">
+                <img src="tic-tac-toe-game-img.png" alt="Tic Tac Toe">
+                <h3>Tic Tac Toe</h3>
+                <p>The timeless two-player classic.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

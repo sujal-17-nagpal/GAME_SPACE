@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.body {
+    background: url("bg.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#board {
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    height: 92vmin;
+    width: 92vmin; /* Changed for better aspect ratio handling */
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added for visual enhancement */
+}
+
+#scoreBox {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slight shadow for clarity */
+}
+
+.head {
+    background: linear-gradient(red, yellow);
+    border: 2px solid purple;
+    transform: scale(1.02);
+    border-radius: 12px;
+}
+.food {
+    background: linear-gradient(red, purple);
+    border: 0.25vmin solid black;
+    border-radius: 50%; /* Made the food circular for better appearance */
+}
+.snake {
+    background-color: purple;
+    border: 0.25vmin solid white;
+    border-radius: 12px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #board {
+        height: 80vmin;
+        width: 80vmin;
+    }
+    #scoreBox {
+        font-size: 1.5rem;
+        right: 4%;
+    }
+    .food, .snake {
+        border: 0.2vmin solid black;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #board {
+        height: 70vmin;
+        width: 70vmin;
+    }
+    #scoreBox {
+        font-size: 1.2rem;
+        right: 3%;
+    }
+    .food, .snake {
+        border: 0.15vmin solid black;
+    }
+    .head {
+        border-radius: 10px;
+    }
+}
