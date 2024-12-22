@@ -139,3 +139,31 @@ window.addEventListener("keydown", (e) => {
       break;
   }
 });
+
+
+//mobile
+
+// Add event listeners for the on-screen controls
+document.getElementById("up").addEventListener("click", () => {
+  inputDir.x = 0;
+  inputDir.y = -1;
+  console.log("Move Up");
+});
+
+document.getElementById("down").addEventListener("click", () => {
+  inputDir.x = 0;
+  inputDir.y = 1;
+  console.log("Move Down");
+});
+
+document.getElementById("left").addEventListener("click", () => {
+  inputDir.x = -1;
+  inputDir.y = 0;
+  console.log("Move Left");
+});
+
+document.getElementById("right").addEventListener("click", () => {
+  inputDir.x = 1;
+  inputDir.y = 0;
+  console.log("Move Right");
+});
